@@ -1,4 +1,4 @@
--- platform rent calculations
+-- platform profitability calculations
 -- tiktok with highest ROAS and lowest CPA 
 SELECT
 	platform,
@@ -26,7 +26,7 @@ GROUP BY industry
 ORDER BY real_ROAS DESC;
 
 -- analysing most profitable campaign type (tiktok e-commerce)
--- most proftable are search campaigns getting 10,7 ROAS while having second best CPA
+-- most proftable are search campaigns getting 10.7 ROAS while having second best CPA
 SELECT
 	campaign_type,
     ROUND(SUM(ad_spend), 2) AS total_spend,
@@ -40,7 +40,7 @@ GROUP BY campaign_type
 ORDER BY real_ROAS DESC;
 
 -- analysing per month (tiktok e-commerce)
--- november with highest ROAS and lowest CPA 
+-- November generated highest ROAS and lowest CPA 
 SELECT
 	DATE_FORMAT(date, '%Y-%m') AS month,
     ROUND(SUM(ad_spend), 2) AS total_spend,
